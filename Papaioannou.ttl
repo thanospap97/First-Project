@@ -1,0 +1,31 @@
+@prefix papt: <http://dilab77.ionio.gr/swp/papaioannou/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+papt:Teacher: rdf:type rdfs:Class;
+                rdfs:subClassof foaf:Person .
+papt:Lecture: rdf:type rdfs:Class .
+papt:Classroom: rdf:type rdfs:Class .
+papt:Lesson: rdf:type rdfs:Class .
+papt:Καθηγητής: rdf:type rdf:Property;
+                    rdfs:domain papt:Lecture;
+                    rdfs:range papt:Teacher .
+papt:Αίθουσα: rdf:type rdf:Property;
+                    rdfs:domain papt:Lecture;
+                    rdfs:range papt:Classroom .
+papt:Μάθημα: rdf:type rdf:Property;
+                    rdfs:domain papt:Lecture;
+                    rdfs:range papt:Lesson .
+papt:Εξάμηνο: rdf:type rdf:Property;
+                    rdfs:domain papt:Lecture;
+                    rdfs:range xsd:string . 
+papt:Ημέρα: rdf:type rdf:Property;
+                    rdfs:domain papt:Lecture;
+                    rdfs:range xsd:string .
+papt:Ώρα%20έναρξης: rdf:type rdf:Property;
+                    rdfs:domain papt:Lecture;
+                    rdfs:range papt:time .
+papt:Ώρα%20λήξης: rdf:type rdf:Property;
+                    rdfs:domain papt:Lecture;
+                    rdfs:range papt:time .
